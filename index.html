@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Bonus Calculator | Advanced Salary & Compensation Tool</title>
+    <meta name="description" content="Calculate your bonus with advanced options. Free, accurate bonus calculator for salary analysis, commission tracking, and compensation planning.">
+    <meta name="keywords" content="bonus calculator, salary calculator, compensation tool, commission calculator, wage calculator, earnings calculator">
+    <meta name="author" content="Bonus Calculator">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bonus Calculator | Advanced Salary & Compensation Tool">
+    <meta property="og:description" content="Calculate your bonus with advanced options. Free, accurate calculator for salary analysis and compensation planning.">
+    <meta property="og:url" content="https://bonuscalculator.github.io">
+    <meta property="og:image" content="https://bonuscalculator.github.io/og-image.png">
+    <meta property="og:site_name" content="Bonus Calculator">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bonus Calculator | Advanced Salary & Compensation Tool">
+    <meta name="twitter:description" content="Calculate your bonus with advanced options. Free, accurate calculator for salary analysis.">
+    <meta name="twitter:image" content="https://bonuscalculator.github.io/og-image.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bonuscalculator.github.io">
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23000' width='100' height='100'/><text x='50' y='65' font-size='60' font-weight='bold' fill='%23fff' text-anchor='middle' font-family='Arial'>₿</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%23000' width='180' height='180'/><text x='90' y='120' font-size='100' font-weight='bold' fill='%23fff' text-anchor='middle' font-family='Arial'>₿</text></svg>">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Bonus Calculator",
+        "description": "Advanced bonus and compensation calculator with detailed analysis",
+        "url": "https://bonuscalculator.github.io",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Bonus Calculator"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Bonus Calculator",
+        "url": "https://bonuscalculator.github.io",
+        "description": "Calculate your bonus with advanced options for accurate salary analysis",
+        "mainEntity": {
+            "@type": "SoftwareApplication",
+            "name": "Bonus Calculator",
+            "operatingSystem": "Web",
+            "applicationCategory": "FinanceApplication"
+        }
+    }
+    </script>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">₿</span>
+                <span class="logo-text">BONUS</span>
+                <span class="logo-sub">CALCULATOR</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#calculator" class="nav-link">Calculator</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="line line-1">CALCULATE</span>
+                <span class="line line-2">YOUR BONUS</span>
+            </h1>
+            <p class="hero-subtitle">Advanced compensation analysis with real-time calculations</p>
+            <button class="hero-cta" onclick="document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' })">
+                START CALCULATING <span class="arrow">→</span>
+            </button>
+        </div>
+        <div class="hero-visual">
+            <div class="geometric-shape shape-1"></div>
+            <div class="geometric-shape shape-2"></div>
+            <div class="geometric-shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="section-header">
+            <h2>Advanced Bonus Calculator</h2>
+            <p>Precise calculations for your compensation</p>
+        </div>
+        
+        <div class="calculator-wrapper">
+            <div class="calculator-panel">
+                <div class="input-group">
+                    <label for="baseSalary">Base Salary</label>
+                    <div class="input-wrapper">
+                        <span class="currency">$</span>
+                        <input type="number" id="baseSalary" placeholder="Enter your base salary" value="50000">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="bonusPercentage">Bonus Percentage</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="bonusPercentage" placeholder="Enter bonus %" value="10" min="0" max="100" step="0.5">
+                        <span class="unit">%</span>
+                    </div>
+                </div>
+
+                <!-- Advanced Options Toggle -->
+                <div class="toggle-advanced">
+                    <input type="checkbox" id="advancedToggle">
+                    <label for="advancedToggle" class="toggle-label">Advanced Options</label>
+                </div>
+
+                <!-- Advanced Options (Hidden by default) -->
+                <div class="advanced-options" id="advancedOptions">
+                    <div class="input-group">
+                        <label for="taxRate">Tax Rate</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="taxRate" placeholder="Tax %" value="20" min="0" max="100" step="0.5">
+                            <span class="unit">%</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="deductions">Annual Deductions</label>
+                        <div class="input-wrapper">
+                            <span class="currency">$</span>
+                            <input type="number" id="deductions" placeholder="Deductions" value="0">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="bonusFrequency">Payment Frequency</label>
+                        <select id="bonusFrequency">
+                            <option value="annual">Annual</option>
+                            <option value="semi-annual">Semi-Annual</option>
+                            <option value="quarterly">Quarterly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="includeOT">
+                        <label for="includeOT">Include Overtime Calculations</label>
+                    </div>
+
+                    <div class="input-group" id="otInputGroup" style="display: none;">
+                        <label for="otHours">Overtime Hours</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="otHours" placeholder="Hours" value="0" min="0">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="calculate-btn" onclick="calculateBonus()">
+                    <span class="btn-text">CALCULATE</span>
+                    <span class="btn-icon">⚡</span>
+                </button>
+            </div>
+
+            <!-- Results Panel -->
+            <div class="results-panel">
+                <h3>Results</h3>
+                
+                <div class="result-item primary">
+                    <span class="result-label">Base Bonus</span>
+                    <span class="result-value" id="resultBaseBonus">$0.00</span>
+                </div>
+
+                <div class="result-divider"></div>
+
+                <div class="result-item" id="taxResultGroup" style="display: none;">
+                    <span class="result-label">Tax Amount</span>
+                    <span class="result-value tax" id="resultTaxAmount">-$0.00</span>
+                </div>
+
+                <div class="result-item" id="deductionsResultGroup" style="display: none;">
+                    <span class="result-label">Deductions</span>
+                    <span class="result-value deduction" id="resultDeductions">-$0.00</span>
+                </div>
+
+                <div class="result-divider" id="divider2" style="display: none;"></div>
+
+                <div class="result-item final">
+                    <span class="result-label">Net Bonus</span>
+                    <span class="result-value final-value" id="resultNetBonus">$0.00</span>
+                </div>
+
+                <div class="breakdown-toggle">
+                    <input type="checkbox" id="showBreakdown">
+                    <label for="showBreakdown">Show Detailed Breakdown</label>
+                </div>
+
+                <div class="breakdown-table" id="breakdownTable" style="display: none;">
+                    <table>
+                        <tr>
+                            <td>Gross Bonus</td>
+                            <td class="value" id="breakdownGross">$0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Federal Tax</td>
+                            <td class="value negative" id="breakdownFederalTax">-$0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Deductions</td>
+                            <td class="value negative" id="breakdownDeductions">-$0.00</td>
+                        </tr>
+                        <tr class="total">
+                            <td>Net Amount</td>
+                            <td class="value" id="breakdownNet">$0.00</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="comparison-info" id="comparisonInfo" style="display: none;">
+                    <h4>Monthly Impact</h4>
+                    <div class="monthly-breakdown">
+                        <div class="monthly-item">
+                            <span>Per Month</span>
+                            <span class="monthly-value" id="monthlyBonus">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>Powerful Features</h2>
+            <p>Everything you need for accurate calculations</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h3>Advanced Options</h3>
+                <p>Tax calculations, deductions, overtime tracking, and payment frequency options for comprehensive analysis.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Detailed Breakdown</h3>
+                <p>View itemized calculations with tax amounts, deductions, and net pay breakdown in real-time.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Real-Time Calculation</h3>
+                <p>Instant results as you adjust inputs. No waiting, no delays, just immediate accuracy.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Optimized</h3>
+                <p>Fully responsive design works seamlessly on desktop, tablet, and mobile devices.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure & Private</h3>
+                <p>All calculations happen locally in your browser. Your data never leaves your device.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Accurate Results</h3>
+                <p>Precision calculations based on current tax brackets and standard deduction rules.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-header">
+            <h2>How It Works</h2>
+            <p>Three simple steps to calculate your bonus</p>
+        </div>
+
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Enter Your Salary</h3>
+                <p>Input your base annual salary in the calculator field. This is the foundation for all calculations.</p>
+            </div>
+
+            <div class="step-divider"></div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Set Bonus Terms</h3>
+                <p>Specify your bonus percentage and use advanced options for taxes, deductions, and frequency.</p>
+            </div>
+
+            <div class="step-divider"></div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Review Results</h3>
+                <p>Instantly see your gross bonus, taxes, deductions, and net amount with detailed breakdown.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics" id="statistics">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" data-target="50000">0</div>
+                <div class="stat-label">Calculations</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="10000">0</div>
+                <div class="stat-label">Users</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="100">0</div>
+                <div class="stat-label">% Accurate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="24">0</div>
+                <div class="stat-label">Hour Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to common questions about bonus calculations</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3 class="faq-question">How is the bonus calculated?</h3>
+                <p class="faq-answer">The bonus is calculated by multiplying your base salary by the bonus percentage. For example, a $50,000 salary with 10% bonus equals $5,000 gross bonus.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Is my data secure?</h3>
+                <p class="faq-answer">Yes. All calculations are performed locally in your browser. We never collect, store, or transmit your financial information.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">How are taxes calculated?</h3>
+                <p class="faq-answer">The tax calculator applies your specified tax rate to the gross bonus amount. You can customize the rate based on your tax bracket.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Can I include overtime?</h3>
+                <p class="faq-answer">Yes. Enable the advanced options toggle, check "Include Overtime," and specify your overtime hours for a comprehensive calculation.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">What about deductions?</h3>
+                <p class="faq-answer">You can specify annual deductions in the advanced options, which will be subtracted from your gross bonus to show your net amount.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Is there a mobile app?</h3>
+                <p class="faq-answer">Our calculator is fully responsive and works perfectly on mobile devices. No app download needed—just use it in your browser.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Calculators Section -->
+    <section class="other-calculators" id="other-calculators">
+        <div class="section-header">
+            <h2>Related Calculators</h2>
+            <p>Explore our suite of financial tools</p>
+        </div>
+
+        <div class="calculators-grid">
+            <a href="#" class="calculator-link">
+                <h3>Salary Calculator</h3>
+                <p>Calculate net salary after taxes and deductions</p>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="#" class="calculator-link">
+                <h3>Commission Calculator</h3>
+                <p>Determine commissions and sales bonuses</p>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="#" class="calculator-link">
+                <h3>Tax Calculator</h3>
+                <p>Estimate federal and state tax obligations</p>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="#" class="calculator-link">
+                <h3>401K Calculator</h3>
+                <p>Plan your retirement contributions</p>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="#" class="calculator-link">
+                <h3>Hourly to Annual</h3>
+                <p>Convert hourly rates to annual salary</p>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="#" class="calculator-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments and interest</p>
+                <span class="link-arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Questions? We'd love to hear from you</p>
+        </div>
+
+        <form class="contact-form" onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">SEND MESSAGE</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>About</h4>
+                <p>Bonus Calculator is a free, accurate financial tool designed to help you understand your compensation and make informed decisions about your earnings.</p>
+                <div class="social-links">
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="LinkedIn">in</a>
+                    <a href="#" title="GitHub">⚙</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Other Calculators</h4>
+                <ul>
+                    <li><a href="#">Salary Calculator</a></li>
+                    <li><a href="#">Commission Calculator</a></li>
+                    <li><a href="#">Tax Calculator</a></li>
+                    <li><a href="#">401K Calculator</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bonus Calculator. All rights reserved. | Designed with precision</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
