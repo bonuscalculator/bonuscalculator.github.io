@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bonus Calculator</title>
+    <meta name="description" content="Contact Bonus Calculator - Get in touch with us for questions, feedback, or support.">
+    <meta name="keywords" content="contact, support, feedback, email">
+    <meta name="author" content="Bonus Calculator">
+    <meta property="og:title" content="Contact - Bonus Calculator">
+    <meta property="og:description" content="Contact Bonus Calculator for support and feedback">
+    <meta property="og:url" content="https://bonuscalculator.github.io/contact.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://bonuscalculator.github.io/contact.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #000;
+            border-bottom: 3px solid #fff;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 2rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border: 2px solid transparent;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            border: 2px solid #ff0000;
+            color: #ff0000;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 4px solid #ff0000;
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-left: 4px solid #ff0000;
+            padding-left: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            background-color: #0a0a0a;
+            border: 3px solid #ff0000;
+            padding: 2rem;
+            margin: 2rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            text-align: center;
+        }
+
+        .info-card h3 {
+            text-transform: uppercase;
+            color: #ff0000;
+            margin-bottom: 1rem;
+        }
+
+        .info-card a {
+            color: #ff0000;
+            text-decoration: none;
+            border-bottom: 2px solid #ff0000;
+            transition: all 0.3s ease;
+        }
+
+        .info-card a:hover {
+            background-color: #ff0000;
+            color: #000;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            background-color: #0a0a0a;
+            border: 2px solid #fff;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ff0000;
+            box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 200px;
+        }
+
+        button {
+            background-color: transparent;
+            border: 3px solid #fff;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff0000;
+            border-color: #ff0000;
+            color: #000;
+        }
+
+        .success-message {
+            background-color: #1a0000;
+            border: 3px solid #ff0000;
+            color: #ff0000;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            border-top: 3px solid #fff;
+            margin-top: 5rem;
+            padding: 3rem 2rem;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-section a {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #fff;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ff0000;
+            margin-left: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 2px solid #333;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">BC</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <h1>Contact Us</h1>
+            
+            <p>Have questions, feedback, or just want to say hello? We'd love to hear from you! Fill out the form below or reach out directly using the contact information provided.</p>
+
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>Email</h3>
+                    <p><a href="mailto:nolushac@gmail.com">nolushac@gmail.com</a></p>
+                </div>
+                <div class="info-card">
+                    <h3>Response Time</h3>
+                    <p>24-48 hours</p>
+                </div>
+                <div class="info-card">
+                    <h3>Status</h3>
+                    <p>Always Open</p>
+                </div>
+            </div>
+
+            <h2>Send Us a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <div class="success-message" id="successMessage">
+                    Message sent successfully! We'll get back to you soon.
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <h2>FAQ</h2>
+            <h3 style="text-transform: uppercase; margin-top: 2rem; margin-bottom: 1rem; color: #ff0000;">How long does it take to receive a response?</h3>
+            <p>We typically respond to inquiries within 24-48 hours. During busy periods, it may take slightly longer.</p>
+
+            <h3 style="text-transform: uppercase; margin-top: 2rem; margin-bottom: 1rem; color: #ff0000;">Can you provide personalized financial advice?</h3>
+            <p>We provide a calculator and general information only. For personalized financial advice, please consult with a qualified financial advisor or tax professional.</p>
+
+            <h3 style="text-transform: uppercase; margin-top: 2rem; margin-bottom: 1rem; color: #ff0000;">Is my information secure?</h3>
+            <p>We take privacy seriously. Messages sent through our contact form are handled securely. See our <a href="privacy.html">Privacy Policy</a> for more details.</p>
+
+            <h3 style="text-transform: uppercase; margin-top: 2rem; margin-bottom: 1rem; color: #ff0000;">Can I use this for business inquiries?</h3>
+            <p>Yes! Feel free to contact us for business proposals, partnerships, or any other inquiries. We're open to collaborations.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Bonus Calculator is a modern tool for calculating bonuses with advanced options and detailed breakdowns.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Pages</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bonus Calculator. All rights reserved. | Built with brutalist design principles.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Create mailto link with form data
+            const mailtoLink = `mailto:nolushac@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            
+            // Open default email client
+            window.location.href = mailtoLink;
+
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+
+            // Reset form
+            this.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

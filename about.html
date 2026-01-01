@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Bonus Calculator</title>
+    <meta name="description" content="Learn about Bonus Calculator - A modern tool for calculating bonuses with advanced options and detailed financial breakdowns.">
+    <meta name="keywords" content="about, bonus calculation, financial tools, calculator">
+    <meta name="author" content="Bonus Calculator">
+    <meta property="og:title" content="About - Bonus Calculator">
+    <meta property="og:description" content="Learn about Bonus Calculator and our mission to simplify bonus calculations">
+    <meta property="og:url" content="https://bonuscalculator.github.io/about.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://bonuscalculator.github.io/about.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #000;
+            border-bottom: 3px solid #fff;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 2rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border: 2px solid transparent;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            border: 2px solid #ff0000;
+            color: #ff0000;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 4px solid #ff0000;
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-left: 4px solid #ff0000;
+            padding-left: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            border: 3px solid #fff;
+            padding: 2rem;
+            background-color: #0a0a0a;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #ff0000;
+            background-color: #1a0000;
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            color: #ff0000;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        a {
+            color: #ff0000;
+            text-decoration: none;
+            border-bottom: 2px solid #ff0000;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #ff0000;
+            color: #000;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            border-top: 3px solid #fff;
+            margin-top: 5rem;
+            padding: 3rem 2rem;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-section a {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #fff;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ff0000;
+            margin-left: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 2px solid #333;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">BC</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <h1>About Bonus Calculator</h1>
+            
+            <h2>Our Mission</h2>
+            <p>Bonus Calculator exists to simplify the complex process of understanding and calculating bonus payments. We believe that financial clarity should be accessible to everyone, regardless of their financial background or expertise. Our tool empowers employees and employers to make informed decisions about compensation.</p>
+
+            <h2>What We Do</h2>
+            <p>We provide a modern, brutalist-designed calculator that breaks down bonus calculations into understandable components. Our advanced options allow users to factor in taxes, deductions, overtime, and payment frequency to get accurate, personalized results.</p>
+
+            <h2>Why Bonus Calculator?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Accurate</h3>
+                    <p>Our calculator uses industry-standard formulas and real-world parameters to provide accurate bonus estimates.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Advanced</h3>
+                    <p>We offer advanced options for tax calculations, deductions, overtime, and multiple payment frequencies.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Modern Design</h3>
+                    <p>Built with brutalist design principles for a clean, professional, and distraction-free experience.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>No Signup</h3>
+                    <p>Use our calculator instantly - no registration, login, or personal information required.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Free</h3>
+                    <p>Completely free to use. We don't charge any fees or require premium subscriptions.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Open Source</h3>
+                    <p>Built with transparent, open-source principles. Your privacy and data security matter to us.</p>
+                </div>
+            </div>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Base Salary Input:</strong> Enter your base salary to start the calculation</li>
+                <li><strong>Bonus Percentage:</strong> Calculate bonuses as a percentage of your base salary</li>
+                <li><strong>Tax Calculations:</strong> Account for federal, state, and local taxes with customizable rates</li>
+                <li><strong>Deduction Tracking:</strong> Include annual deductions in your calculations</li>
+                <li><strong>Payment Frequency:</strong> Calculate monthly, quarterly, or annual impacts</li>
+                <li><strong>Overtime Calculations:</strong> Apply overtime multipliers (1.5x standard rate)</li>
+                <li><strong>Detailed Breakdown:</strong> See line-by-line breakdown of your calculations</li>
+                <li><strong>Real-Time Results:</strong> Watch results update as you adjust inputs</li>
+            </ul>
+
+            <h2>Our Values</h2>
+            <p><strong>Transparency:</strong> We believe in transparent calculations and honest communication about what our tool can and cannot do.</p>
+            <p><strong>Privacy:</strong> Your data is yours. We don't store, track, or sell personal information. All calculations happen locally on your device.</p>
+            <p><strong>Accessibility:</strong> Financial tools should be accessible to everyone. Our calculator is free and requires no signup or special knowledge.</p>
+            <p><strong>Accuracy:</strong> We continuously improve our calculations and documentation to provide the most accurate results possible.</p>
+
+            <h2>Disclaimer</h2>
+            <p>While we strive for accuracy, please remember that Bonus Calculator provides estimates based on the information you provide. For personalized financial advice, consult with a financial advisor or tax professional. See our full <a href="disclaimer.html">disclaimer page</a> for more details.</p>
+
+            <h2>Contact & Support</h2>
+            <p>Have questions or feedback? We'd love to hear from you! Contact us at <a href="mailto:nolushac@gmail.com">nolushac@gmail.com</a>. You can also visit our <a href="contact.html">contact page</a> to send us a message directly.</p>
+
+            <p style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #333; font-size: 0.9rem;">Last Updated: January 2026</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Bonus Calculator is a modern tool for calculating bonuses with advanced options and detailed breakdowns.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Pages</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bonus Calculator. All rights reserved. | Built with brutalist design principles.</p>
+        </div>
+    </footer>
+</body>
+</html>
