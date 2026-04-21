@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Bonus Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+</head>
+<body>
+
+  <div id="header-root"></div>
+
+  <main>
+    <section class="section bg-cream">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-label">✦ Get In Touch</div>
+        <h1 class="section-title">Contact <em>Us</em></h1>
+        <p class="section-sub">Have a suggestion for a new calculator feature or found a bug? We'd love to hear from you.</p>
+        
+        <div class="calc-wrapper" style="padding: 40px; background: var(--white); border: 2px solid var(--border);">
+          <div class="contact-info" style="margin-bottom: 30px;">
+            <h3 style="color: var(--forest);">Direct Support</h3>
+            <p>For inquiries regarding the website, technical issues, or collaboration opportunities, you can reach out directly via email:</p>
+            <p><strong>Email:</strong> <a href="mailto:nolushac@gmail.com" style="color: var(--moss); font-weight: 700;">nolushac@gmail.com</a></p>
+          </div>
+
+          <form action="https://formspree.io/f/nolushac@gmail.com" method="POST" class="calc-form">
+            <div class="input-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="John Doe" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 4px;">
+            </div>
+            <div class="input-group" style="margin-top: 20px;">
+              <label>Your Email</label>
+              <input type="email" name="_replyto" placeholder="john@example.com" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 4px;">
+            </div>
+            <div class="input-group" style="margin-top: 20px;">
+              <label>Message</label>
+              <textarea name="message" rows="5" placeholder="How can we help?" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 30px; width: 100%;">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script src="header.js"></script>
+  <script src="footer.js"></script>
+</body>
+</html>
