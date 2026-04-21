@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bonus Calculator – Calculate Employee Bonus, Performance Pay & Incentives</title>
+  <meta name="description" content="Free online Bonus Calculator to compute employee bonuses, performance incentives, annual bonuses, commission pay, and profit-sharing. Accurate, fast, and easy to use." />
+  <meta name="keywords" content="bonus calculator, employee bonus calculator, performance bonus, annual bonus calculator, commission calculator, incentive pay calculator, profit sharing calculator" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bonuscalculator.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bonus Calculator – Employee Bonus & Incentive Pay Calculator" />
+  <meta property="og:description" content="Calculate employee bonuses, performance pay, commissions, and profit sharing online. Free, accurate, and instant." />
+  <meta property="og:url" content="https://bonuscalculator.github.io/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Bonus Calculator",
+    "url": "https://bonuscalculator.github.io/",
+    "description": "Free online tool to calculate employee bonuses, performance incentives, annual bonuses, commissions, and profit sharing amounts.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Employee Bonus Calculator",
+      "Performance Bonus Calculator",
+      "Annual Bonus Calculator",
+      "Commission Calculator",
+      "Profit Sharing Calculator",
+      "Tax Estimation on Bonus"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is an employee bonus calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An employee bonus is typically calculated as a percentage of the base salary, multiplied by a performance multiplier. The formula is: Bonus = Base Salary × Bonus Percentage × Performance Rating."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a performance bonus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A performance bonus is an incentive payment tied to individual, team, or company performance metrics. It rewards employees for meeting or exceeding predefined goals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are bonuses taxed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the US, bonuses are subject to federal income tax withholding, Social Security, and Medicare taxes. The IRS considers bonuses as supplemental wages, typically withheld at a flat 22% federal rate for amounts under $1 million."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header injected by header.js -->
+  <div id="header-root"></div>
+
+  <main>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+      <div class="hero-bg-pattern"></div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="hero-badge">✦ Free Online Tool</span>
+          <h1>Bonus <em>Calculator</em></h1>
+          <p class="hero-sub">Calculate employee bonuses, performance incentives, commissions, and profit-sharing instantly — with tax estimation built in.</p>
+          <div class="hero-cta-row">
+            <a href="#calculator" class="btn btn-primary">Start Calculating</a>
+            <a href="#how-it-works" class="btn btn-outline">How It Works</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>5+</strong><span>Bonus Types</span></div>
+            <div class="stat"><strong>100%</strong><span>Free to Use</span></div>
+            <div class="stat"><strong>Instant</strong><span>Results</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="calc-preview-card">
+            <div class="preview-label">Quick Preview</div>
+            <div class="preview-row"><span>Base Salary</span><strong>$75,000</strong></div>
+            <div class="preview-row"><span>Bonus Rate</span><strong>15%</strong></div>
+            <div class="preview-row"><span>Performance</span><strong>1.2×</strong></div>
+            <div class="preview-divider"></div>
+            <div class="preview-row result-row"><span>Gross Bonus</span><strong class="accent">$13,500</strong></div>
+            <div class="preview-row result-row"><span>After Tax (~22%)</span><strong class="accent">$10,530</strong></div>
+            <div class="preview-sparkle">✦ Calculated in seconds</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--cream)"/></svg>
+      </div>
+    </section>
+
+    <!-- ===== CALCULATOR SECTION ===== -->
+    <section class="section calculator-section" id="calculator">
+      <div class="container">
+        <div class="section-label">✦ Interactive Tool</div>
+        <h2 class="section-title">Bonus Calculator</h2>
+        <p class="section-sub">Choose your bonus type and enter the details below for an instant, detailed breakdown.</p>
+
+        <div class="calc-wrapper">
+          <!-- Bonus Type Tabs -->
+          <div class="calc-tabs" role="tablist">
+            <button class="tab-btn active" data-tab="performance" role="tab">Performance Bonus</button>
+            <button class="tab-btn" data-tab="annual" role="tab">Annual Bonus</button>
+            <button class="tab-btn" data-tab="commission" role="tab">Commission</button>
+            <button class="tab-btn" data-tab="profitshare" role="tab">Profit Sharing</button>
+            <button class="tab-btn" data-tab="signing" role="tab">Signing Bonus</button>
+          </div>
+
+          <div class="calc-body">
+            <!-- Performance Bonus Tab -->
+            <div class="tab-panel active" id="tab-performance">
+              <div class="calc-grid">
+                <div class="calc-inputs">
+                  <h3>Performance Bonus Calculator</h3>
+                  <div class="input-group">
+                    <label>Annual Base Salary ($)</label>
+                    <input type="number" id="pb-salary" placeholder="e.g. 75000" value="75000" min="0" />
+                  </div>
+                  <div class="input-group">
+                    <label>Target Bonus Percentage (%)</label>
+                    <input type="number" id="pb-percent" placeholder="e.g. 15" value="15" min="0" max="200" />
+                    <div class="range-hint">Common: 5% (junior) → 30%+ (senior/executive)</div>
+                  </div>
+                  <div class="input-group">
+                    <label>Performance Rating Multiplier</label>
+                    <select id="pb-rating">
+                      <option value="0.5">0.5× – Needs Improvement</option>
+                      <option value="0.8">0.8× – Below Expectations</option>
+                      <option value="1.0" selected>1.0× – Meets Expectations</option>
+                      <option value="1.2">1.2× – Exceeds Expectations</option>
+                      <option value="1.5">1.5× – Outstanding</option>
+                      <option value="2.0">2.0× – Exceptional</option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <label>Company Performance Factor (%)</label>
+                    <input type="number" id="pb-company" placeholder="e.g. 100" value="100" min="0" max="200" />
+                    <div class="range-hint">100% = full payout; 80% = company hit 80% of targets</div>
+                  </div>
+                  <div class="input-group">
+                    <label>Tax Withholding Rate (%)</label>
+                    <input type="number" id="pb-tax" placeholder="e.g. 22" value="22" min="0" max="60" />
+                  </div>
+                  <button class="btn btn-primary calc-btn" onclick="calculatePerformance()">Calculate Bonus →</button>
+                </div>
+                <div class="calc-results" id="pb-results">
+                  <div class="results-placeholder">
+                    <div class="placeholder-icon">📊</div>
+                    <p>Fill in the fields and click <strong>Calculate Bonus</strong> to see your detailed breakdown.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Annual Bonus Tab -->
+            <div class="tab-panel" id="tab-annual">
+              <div class="calc-grid">
+                <div class="calc-inputs">
+                  <h3>Annual Bonus Calculator</h3>
+                  <div class="input-group">
+                    <label>Annual Base Salary ($)</label>
+                    <input type="number" id="ab-salary" placeholder="e.g. 85000" value="85000" />
+                  </div>
+                  <div class="input-group">
+                    <label>Annual Bonus Percentage (%)</label>
+                    <input type="number" id="ab-percent" placeholder="e.g. 10" value="10" />
+                  </div>
+                  <div class="input-group">
+                    <label>Months Worked This Year</label>
+                    <input type="number" id="ab-months" placeholder="e.g. 12" value="12" min="1" max="12" />
+                  </div>
+                  <div class="input-group">
+                    <label>Tax Withholding Rate (%)</label>
+                    <input type="number" id="ab-tax" placeholder="e.g. 22" value="22" />
+                  </div>
+                  <button class="btn btn-primary calc-btn" onclick="calculateAnnual()">Calculate Bonus →</button>
+                </div>
+                <div class="calc-results" id="ab-results">
+                  <div class="results-placeholder">
+                    <div class="placeholder-icon">📅</div>
+                    <p>Fill in the fields and click <strong>Calculate Bonus</strong> to see your breakdown.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Commission Tab -->
+            <div class="tab-panel" id="tab-commission">
+              <div class="calc-grid">
+                <div class="calc-inputs">
+                  <h3>Commission Calculator</h3>
+                  <div class="input-group">
+                    <label>Total Sales Revenue ($)</label>
+                    <input type="number" id="cm-revenue" placeholder="e.g. 250000" value="250000" />
+                  </div>
+                  <div class="input-group">
+                    <label>Commission Rate (%)</label>
+                    <input type="number" id="cm-rate" placeholder="e.g. 5" value="5" />
+                  </div>
+                  <div class="input-group">
+                    <label>Sales Quota ($)</label>
+                    <input type="number" id="cm-quota" placeholder="e.g. 200000" value="200000" />
+                  </div>
+                  <div class="input-group">
+                    <label>Accelerator Rate above Quota (%)</label>
+                    <input type="number" id="cm-accel" placeholder="e.g. 8" value="8" />
+                    <div class="range-hint">Higher rate applied to sales exceeding quota</div>
+                  </div>
+                  <div class="input-group">
+                    <label>Tax Withholding Rate (%)</label>
+                    <input type="number" id="cm-tax" placeholder="e.g. 22" value="22" />
+                  </div>
+                  <button class="btn btn-primary calc-btn" onclick="calculateCommission()">Calculate Commission →</button>
+                </div>
+                <div class="calc-results" id="cm-results">
+                  <div class="results-placeholder">
+                    <div class="placeholder-icon">💰</div>
+                    <p>Fill in the fields and click <strong>Calculate Commission</strong> to see your breakdown.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profit Sharing Tab -->
+            <div class="tab-panel" id="tab-profitshare">
+              <div class="calc-grid">
+                <div class="calc-inputs">
+                  <h3>Profit Sharing Calculator</h3>
+                  <div class="input-group">
+                    <label>Company Net Profit ($)</label>
+                    <input type="number" id="ps-profit" placeholder="e.g. 1000000" value="1000000" />
+                  </div>
+                  <div class="input-group">
+                    <label>Profit Sharing Pool (%)</label>
+                    <input type="number" id="ps-pool" placeholder="e.g. 10" value="10" />
+                    <div class="range-hint">Percentage of profits allocated to employees</div>
+                  </div>
+                  <div class="input-group">
+                    <label>Your Annual Salary ($)</label>
+                    <input type="number" id="ps-salary" placeholder="e.g. 70000" value="70000" />
+                  </div>
+                  <div class="input-group">
+                    <label>Total Company Payroll ($)</label>
+                    <input type="number" id="ps-payroll" placeholder="e.g. 2000000" value="2000000" />
+                  </div>
+                  <div class="input-group">
+                    <label>Tax Withholding Rate (%)</label>
+                    <input type="number" id="ps-tax" placeholder="e.g. 22" value="22" />
+                  </div>
+                  <button class="btn btn-primary calc-btn" onclick="calculateProfitShare()">Calculate Share →</button>
+                </div>
+                <div class="calc-results" id="ps-results">
+                  <div class="results-placeholder">
+                    <div class="placeholder-icon">🏢</div>
+                    <p>Fill in the fields and click <strong>Calculate Share</strong> to see your breakdown.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Signing Bonus Tab -->
+            <div class="tab-panel" id="tab-signing">
+              <div class="calc-grid">
+                <div class="calc-inputs">
+                  <h3>Signing Bonus Calculator</h3>
+                  <div class="input-group">
+                    <label>Gross Signing Bonus ($)</label>
+                    <input type="number" id="sb-amount" placeholder="e.g. 20000" value="20000" />
+                  </div>
+                  <div class="input-group">
+                    <label>Clawback / Vesting Period (months)</label>
+                    <input type="number" id="sb-clawback" placeholder="e.g. 12" value="12" />
+                    <div class="range-hint">Period during which you may owe back the bonus if you leave</div>
+                  </div>
+                  <div class="input-group">
+                    <label>Months Already Worked</label>
+                    <input type="number" id="sb-worked" placeholder="e.g. 6" value="6" min="0" />
+                  </div>
+                  <div class="input-group">
+                    <label>Federal Tax Rate (%)</label>
+                    <input type="number" id="sb-federal" placeholder="e.g. 22" value="22" />
+                  </div>
+                  <div class="input-group">
+                    <label>State Tax Rate (%)</label>
+                    <input type="number" id="sb-state" placeholder="e.g. 5" value="5" />
+                  </div>
+                  <button class="btn btn-primary calc-btn" onclick="calculateSigning()">Calculate Signing Bonus →</button>
+                </div>
+                <div class="calc-results" id="sb-results">
+                  <div class="results-placeholder">
+                    <div class="placeholder-icon">✍️</div>
+                    <p>Fill in the fields and click <strong>Calculate</strong> to see your net signing bonus and clawback info.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section how-section bg-cream" id="how-it-works">
+      <div class="container">
+        <div class="section-label">✦ Simple Process</div>
+        <h2 class="section-title">How to Calculate Your Bonus</h2>
+        <p class="section-sub">Our bonus calculator follows industry-standard formulas used by HR professionals and compensation analysts worldwide.</p>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>Select Bonus Type</h3>
+            <p>Choose from performance bonus, annual bonus, commission, profit sharing, or signing bonus — each has its own formula and inputs.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>Enter Your Details</h3>
+            <p>Input your base salary, bonus percentage, performance rating, and any other relevant figures. All fields include helpful guidance.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>Get Instant Results</h3>
+            <p>Click calculate to instantly see your gross bonus, tax withholding, net take-home amount, and a detailed line-by-line breakdown.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <h3>Compare & Plan</h3>
+            <p>Adjust inputs to model different scenarios — like what your bonus would be at a higher performance rating or with a different tax rate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BONUS TYPES SECTION ===== -->
+    <section class="section bonus-types-section" id="bonus-types">
+      <div class="container">
+        <div class="section-label">✦ Comprehensive Coverage</div>
+        <h2 class="section-title">Types of Employee Bonuses</h2>
+        <p class="section-sub">Understanding the different kinds of bonuses helps you know what you're owed and how to negotiate effectively.</p>
+        <div class="types-grid">
+          <div class="type-card">
+            <div class="type-icon">🎯</div>
+            <h3>Performance Bonus</h3>
+            <p>The most common form of variable pay. Tied directly to individual or team performance against pre-set KPIs, OKRs, or goal metrics. Usually expressed as a percentage of base salary and scaled by a performance multiplier.</p>
+            <div class="type-formula"><span>Formula:</span> Base Salary × Bonus % × Performance Multiplier × Company Factor</div>
+          </div>
+          <div class="type-card">
+            <div class="type-icon">📅</div>
+            <h3>Annual Bonus</h3>
+            <p>A discretionary or contractual lump sum paid at the end of the fiscal or calendar year. Often tied to overall company profitability and may be prorated based on tenure or months of service during the year.</p>
+            <div class="type-formula"><span>Formula:</span> Base Salary × Bonus % × (Months Worked / 12)</div>
+          </div>
+          <div class="type-card">
+            <div class="type-icon">💼</div>
+            <h3>Commission Pay</h3>
+            <p>Earned by sales professionals based on the revenue they generate. Can be a flat rate on all sales, or tiered with accelerators that pay higher rates once a quota is exceeded — a powerful motivator for overachievers.</p>
+            <div class="type-formula"><span>Formula:</span> Sales × Rate + (Overquota Sales × Accelerator Rate)</div>
+          </div>
+          <div class="type-card">
+            <div class="type-icon">🏢</div>
+            <h3>Profit Sharing</h3>
+            <p>A percentage of company profits distributed to employees, usually proportional to each employee's salary relative to total payroll. Aligns employee interests with the company's financial success and long-term growth.</p>
+            <div class="type-formula"><span>Formula:</span> (Your Salary / Total Payroll) × Profit Pool Amount</div>
+          </div>
+          <div class="type-card">
+            <div class="type-icon">✍️</div>
+            <h3>Signing Bonus</h3>
+            <p>A one-time payment made to a new employee when they accept a job offer. Often used to offset compensation the candidate is giving up at their previous employer. Typically subject to clawback if the employee leaves early.</p>
+            <div class="type-formula"><span>Key Factor:</span> Clawback period and prorated repayment schedule</div>
+          </div>
+          <div class="type-card">
+            <div class="type-icon">🏆</div>
+            <h3>Retention Bonus</h3>
+            <p>Paid to encourage key employees to stay with the company through a critical period such as a merger, acquisition, or major project completion. Usually vests over time or is paid as a lump sum after a defined period.</p>
+            <div class="type-formula"><span>Key Factor:</span> Service period, milestone dates, and vesting schedule</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BONUS FORMULAS SECTION ===== -->
+    <section class="section formulas-section bg-cream" id="formulas">
+      <div class="container">
+        <div class="section-label">✦ Education & Reference</div>
+        <h2 class="section-title">Bonus Calculation Formulas Explained</h2>
+        <p class="section-sub">Here's exactly how each formula works so you can verify calculations and understand the underlying math.</p>
+        <div class="formulas-layout">
+          <div class="formula-block">
+            <div class="formula-header">
+              <span class="formula-tag">PERFORMANCE BONUS</span>
+              <h3>Target Bonus Method</h3>
+            </div>
+            <div class="formula-display">
+              Bonus = Salary × Target% × Perf. Multiplier × Company Factor%
+            </div>
+            <p>The <strong>target bonus percentage</strong> is set at hire. The <strong>performance multiplier</strong> (0.5× to 2.0×) reflects your individual rating. The <strong>company factor</strong> scales down all bonuses if the company underperforms — typically 0% to 150%.</p>
+            <div class="formula-example">
+              <strong>Example:</strong> $80,000 salary × 20% target × 1.2× rating × 90% company = <em>$17,280 gross bonus</em>
+            </div>
+          </div>
+
+          <div class="formula-block">
+            <div class="formula-header">
+              <span class="formula-tag">COMMISSION</span>
+              <h3>Tiered Accelerator Method</h3>
+            </div>
+            <div class="formula-display">
+              Comm. = (Quota × Base Rate) + (Overquota Sales × Accelerator Rate)
+            </div>
+            <p>Sales up to the quota earn the <strong>base commission rate</strong>. Sales beyond the quota earn the higher <strong>accelerator rate</strong>. This structure motivates reps to push past their targets rather than stopping at quota.</p>
+            <div class="formula-example">
+              <strong>Example:</strong> $200K quota at 5% + $50K over-quota at 8% = <em>$10,000 + $4,000 = $14,000</em>
+            </div>
+          </div>
+
+          <div class="formula-block">
+            <div class="formula-header">
+              <span class="formula-tag">TAX ESTIMATION</span>
+              <h3>Supplemental Wage Method</h3>
+            </div>
+            <div class="formula-display">
+              Net Bonus = Gross Bonus × (1 – Withholding Rate%)
+            </div>
+            <p>The IRS treats bonuses as <strong>supplemental wages</strong> subject to a flat 22% federal withholding rate (for amounts under $1M). State and local taxes are additional. Social Security (6.2%) and Medicare (1.45%) also apply.</p>
+            <div class="formula-example">
+              <strong>Example:</strong> $15,000 bonus × (1 – 22% – 5% – 7.65%) = <em>approximately $9,803 net</em>
+            </div>
+          </div>
+
+          <div class="formula-block">
+            <div class="formula-header">
+              <span class="formula-tag">PROFIT SHARING</span>
+              <h3>Pro-Rata Salary Method</h3>
+            </div>
+            <div class="formula-display">
+              Your Share = (Your Salary ÷ Total Payroll) × Total Pool
+            </div>
+            <p>The company allocates a percentage of profits to a pool. Each employee receives a share proportional to their salary relative to total payroll. This is the most common profit-sharing allocation method in US companies.</p>
+            <div class="formula-example">
+              <strong>Example:</strong> $70K ÷ $2M payroll × $100K pool = <em>$3,500 profit share</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TIPS SECTION ===== -->
+    <section class="section tips-section" id="tips">
+      <div class="container">
+        <div class="section-label">✦ Expert Guidance</div>
+        <h2 class="section-title">Tips to Maximize Your Bonus</h2>
+        <p class="section-sub">Understanding how bonuses are structured gives you real leverage during negotiations and performance reviews.</p>
+        <div class="tips-columns">
+          <div class="tips-col">
+            <div class="tip-item">
+              <div class="tip-icon">📋</div>
+              <div>
+                <h3>Know Your Target Bonus Percentage</h3>
+                <p>Every role has a <em>target bonus</em> built into total compensation. If your offer letter says "eligible for up to 15% bonus," that 15% is your target assuming full performance and company payout. Always clarify whether this is discretionary or contractual.</p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-icon">📈</div>
+              <div>
+                <h3>Understand Your Performance Multiplier</h3>
+                <p>Most companies use a 0–2× multiplier linked to your annual review rating. A "Meets Expectations" rating typically pays 1.0× your target. "Exceeds Expectations" might be 1.2–1.5×. Aiming for the top rating can dramatically increase your bonus.</p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-icon">🗓️</div>
+              <div>
+                <h3>Watch Your Hire Date & Proration</h3>
+                <p>Many companies prorate bonuses based on your months of service. If you start in July, you may receive only half the annual bonus. Factor this into your total comp comparison when evaluating a new offer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="tips-col">
+            <div class="tip-item">
+              <div class="tip-icon">💡</div>
+              <div>
+                <h3>Negotiate the Bonus Structure, Not Just the Number</h3>
+                <p>When negotiating, ask about the bonus structure: Is the target guaranteed or discretionary? What does the company factor look like historically? A "20% target" at a company that consistently pays 60% of target is worth less than a "12% target" at a company that always pays 100%.</p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-icon">🧾</div>
+              <div>
+                <h3>Plan for the Tax Impact</h3>
+                <p>Bonuses are withheld at 22% federally (flat rate method), which can feel like a big cut. However, your actual tax liability depends on your total annual income. You may owe more — or get a refund — at tax time. Use our tax estimator to plan accordingly.</p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-icon">📝</div>
+              <div>
+                <h3>Document Your Achievements</h3>
+                <p>The best way to earn a top performance multiplier is to document wins throughout the year. Track metrics, project impacts, and feedback so your annual review reflects your actual contributions — not just what your manager remembers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMPARISON TABLE ===== -->
+    <section class="section compare-section bg-cream" id="comparison">
+      <div class="container">
+        <div class="section-label">✦ At a Glance</div>
+        <h2 class="section-title">Bonus Type Comparison</h2>
+        <p class="section-sub">A quick reference to understand how each bonus type differs by timing, eligibility, and typical payout range.</p>
+        <div class="table-wrapper">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Bonus Type</th>
+                <th>Who Receives It</th>
+                <th>Typical Range</th>
+                <th>Payment Timing</th>
+                <th>Guaranteed?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Performance Bonus</strong></td>
+                <td>All employees</td>
+                <td>5% – 30% of salary</td>
+                <td>Annually (Q1 next year)</td>
+                <td>Usually discretionary</td>
+              </tr>
+              <tr>
+                <td><strong>Annual Bonus</strong></td>
+                <td>All employees</td>
+                <td>5% – 20% of salary</td>
+                <td>Year-end</td>
+                <td>May be contractual</td>
+              </tr>
+              <tr>
+                <td><strong>Commission</strong></td>
+                <td>Sales roles</td>
+                <td>3% – 15% of sales</td>
+                <td>Monthly / Quarterly</td>
+                <td>Yes (on earned sales)</td>
+              </tr>
+              <tr>
+                <td><strong>Profit Sharing</strong></td>
+                <td>All eligible employees</td>
+                <td>2% – 10% of salary</td>
+                <td>Annually / Quarterly</td>
+                <td>Depends on profits</td>
+              </tr>
+              <tr>
+                <td><strong>Signing Bonus</strong></td>
+                <td>New hires</td>
+                <td>5% – 50% of salary</td>
+                <td>On start date</td>
+                <td>Yes (with clawback)</td>
+              </tr>
+              <tr>
+                <td><strong>Retention Bonus</strong></td>
+                <td>Key employees</td>
+                <td>10% – 25% of salary</td>
+                <td>After service period</td>
+                <td>Yes (if criteria met)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-label">✦ Common Questions</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-sub">Everything you need to know about bonus calculations, taxes, and negotiation strategies.</p>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              How is an employee bonus calculated?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>An employee bonus is typically calculated using the formula: <strong>Bonus = Base Salary × Bonus Percentage × Performance Multiplier × Company Performance Factor</strong>. The base salary is your annual gross pay. The bonus percentage is the target rate set for your role. The performance multiplier (usually 0.5× to 2.0×) reflects your individual performance rating. The company factor adjusts the payout based on overall business results.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              How are bonuses taxed in the US?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>The IRS classifies bonuses as <strong>supplemental wages</strong>. Employers have two withholding options: (1) the <strong>flat rate method</strong> — a flat 22% federal withholding on bonuses under $1 million — or (2) the <strong>aggregate method</strong>, which combines the bonus with regular pay for the pay period. State income taxes, Social Security (6.2%), and Medicare (1.45%) also apply. Note that withholding is not your actual tax liability; you may receive a refund or owe more when you file.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              What is a typical performance bonus percentage?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>Target bonus percentages vary significantly by role and level. <strong>Entry-level employees</strong> typically see 5–10%. <strong>Mid-level managers</strong> are often in the 10–20% range. <strong>Directors and VPs</strong> commonly see 20–40%. <strong>C-suite executives</strong> can have bonus targets of 50–100%+ of base salary. Industry also matters — finance and technology tend to offer higher bonus targets than education or nonprofits.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              What is a signing bonus clawback?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>A signing bonus <strong>clawback</strong> (or clawback provision) is a contractual clause requiring you to repay the signing bonus if you leave the company before a specified date — typically 6 to 24 months. Repayment may be full or prorated (e.g., you've worked 6 months of a 12-month clawback period, so you repay 50%). Always read the clawback terms before accepting a signing bonus.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Can I negotiate my bonus structure?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes — bonus structure is often negotiable, especially at offer stage. You can ask for a <strong>higher target bonus percentage</strong>, a <strong>guaranteed minimum</strong> for the first year, or a <strong>sign-on bonus</strong> to offset a bonus you're leaving behind at your current employer. During reviews, focus on documenting your impact to maximize your performance rating and thus your payout multiplier.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Is a $5,000 bonus good?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>It depends on your salary. A $5,000 bonus on a $50,000 salary is a 10% bonus — which is solidly in the average range. On a $150,000 salary, it represents only 3.3% — below average for that level. What matters is the <strong>bonus as a percentage of base pay</strong> relative to your industry, role level, and the company's stated target. Our calculator helps you assess what you should expect versus what you're receiving.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT / CONTENT SECTION ===== -->
+    <section class="section about-section bg-cream" id="about">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-text">
+            <div class="section-label">✦ About This Tool</div>
+            <h2>Why Use Our Bonus Calculator?</h2>
+            <p>Compensation is one of the most important — and least transparent — aspects of professional life. Most employees don't know exactly how their bonus is computed, which makes it difficult to plan finances, compare job offers, or negotiate effectively.</p>
+            <p>Our <strong>Bonus Calculator</strong> was built to give employees, HR professionals, and compensation analysts a clear, fast, and free way to compute accurate bonus figures. Whether you're calculating a <strong>performance bonus</strong> before your review, comparing two job offers with different <strong>commission structures</strong>, or understanding your <strong>net signing bonus</strong> after taxes, this tool does the math precisely.</p>
+            <p>We've built five distinct calculators covering the most common bonus types, each with its own industry-standard formula. All calculations happen instantly in your browser — no data is sent to any server, and your information stays completely private.</p>
+            <div class="about-bullets">
+              <div class="about-bullet">✓ Free, with no account required</div>
+              <div class="about-bullet">✓ Five bonus calculator types</div>
+              <div class="about-bullet">✓ Tax estimation included</div>
+              <div class="about-bullet">✓ 100% private — no data stored</div>
+              <div class="about-bullet">✓ Used by employees & HR teams</div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="about-card">
+              <div class="about-card-title">Bonus Benchmark</div>
+              <div class="benchmark-bars">
+                <div class="bench-item">
+                  <span>Entry Level</span>
+                  <div class="bench-bar"><div class="bench-fill" style="width:35%">5–10%</div></div>
+                </div>
+                <div class="bench-item">
+                  <span>Mid-Level</span>
+                  <div class="bench-bar"><div class="bench-fill" style="width:55%">10–20%</div></div>
+                </div>
+                <div class="bench-item">
+                  <span>Director</span>
+                  <div class="bench-bar"><div class="bench-fill" style="width:75%">20–35%</div></div>
+                </div>
+                <div class="bench-item">
+                  <span>VP</span>
+                  <div class="bench-bar"><div class="bench-fill" style="width:85%">30–50%</div></div>
+                </div>
+                <div class="bench-item">
+                  <span>C-Suite</span>
+                  <div class="bench-bar"><div class="bench-fill" style="width:100%">50–100%+</div></div>
+                </div>
+              </div>
+              <p class="bench-note">Typical performance bonus target as % of base salary</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-inner">
+            <h2>Ready to Calculate Your Bonus?</h2>
+            <p>Use our free calculator to get an instant, accurate breakdown of your bonus, tax withholding, and take-home pay. No sign-up required.</p>
+            <a href="#calculator" class="btn btn-primary btn-lg">Calculate Your Bonus Now →</a>
+          </div>
+          <div class="cta-decoration">✦</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer injected by footer.js -->
+  <div id="footer-root"></div>
+
+  <script src="header.js"></script>
+  <script src="footer.js"></script>
+  <script src="calculator.js"></script>
+</body>
+</html>
