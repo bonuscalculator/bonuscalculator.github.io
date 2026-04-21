@@ -3,7 +3,7 @@
   const headerHTML = `
     <header class="site-header">
       <div class="container header-inner">
-        <a href="#home" class="site-logo">
+        <a href="/" class="site-logo">
           <div class="logo-icon">✦</div>
           BonusCalc
         </a>
